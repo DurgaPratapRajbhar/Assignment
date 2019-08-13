@@ -17,15 +17,14 @@ class CreateFilmsTbl extends Migration
         $table->increments('id');
         $table->integer('ass_tbl_id');
         $table->string('films_name');
+        $table->timestamps();
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+     
     public function down()
     {
-        Schema::dropIfExists('ass_tbl');
+        Schema::dropIfExists('films_tbl');
     }
+
 }
